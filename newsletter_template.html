@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miltonian Newsletter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/city_logo.png" alt="City Logo" class="city-logo">
+        <h1>Miltonian Newsletter - October 2025</h1>
+    </header>
+
+    <!-- Featured Articles -->
+     <section class="section">
+        <h2>Featured Articles</h2>
+        {% for article in featured_articles %}
+        <div class="article">
+        {% if article.image %}
+            <img src="{{ article.image }}" alt="Article Image" class="article-image">
+        {% endif %}
+        <p>{{ article.content }}</p>
+        <p class="author">By {{ article.author }}</p>>
+        </div>
+        {% endfor %}
+     </section>
+
+     <!-- City Events  -->
+      <section class="section">
+        <h2>City Events</h2>
+        <div class="column">
+            {% for event in city_events %}
+            <div class="event">
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.date }} | {{ event.location }}</p>
+                <p>{{ event.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Community Photos -->
+     <section class="section">
+        <h2>Community Photos</h2>
+        <div class="columns">
+            {% for photo in community_photos %}
+            <div class="column photo">
+                <img src="{{ photo.url }}" class="photo-image" alt="Community Photo">
+                <p class="caption">{{ photo.caption }} - {{ photo.author }}</p>
+            </div>
+            {% endfor %}
+        </div>
+     </section>
+</body>
+</html>

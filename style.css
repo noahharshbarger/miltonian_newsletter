@@ -1,0 +1,74 @@
+@page {
+    size: A4;
+    margin: 1in;
+}
+
+body {
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.4;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    max-width: 15px;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.article-image, .photo-image {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.author {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 40px;
+}
